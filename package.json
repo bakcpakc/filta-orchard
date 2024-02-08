@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "dev": "concurrently \"webpack --watch\" \"live-server\""
+  },
+  "dependencies": {
+    "webpack": "^5.90.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "css-loader": "^6.10.0",
+    "live-server": "^1.2.2",
+    "mini-css-extract-plugin": "^2.8.0",
+    "style-loader": "^3.3.4",
+    "webpack-cli": "^5.1.4"
+  }
+}

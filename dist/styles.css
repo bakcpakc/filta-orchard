@@ -1,0 +1,238 @@
+/*!************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/style.css ***!
+  \************************************************************************/
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url(57cd57a648021fa1c396.ttf) format('truetype') ;
+}
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url(8ed223d62df9e1a6a838.ttf) format('truetype') ;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url(a0fe34bea92d4e1a84d6.ttf) format('truetype') ;
+}
+@font-face {
+    font-family: 'OpenSans-Medium';
+    src: url(65529e6c75fe516f596a.ttf) format('truetype') ;
+}
+
+*{
+    box-sizing: content-box;
+    margin: 0;
+    --red: #CF1430;
+    --dark: #0E1414;
+    letter-spacing: 1px;
+}
+
+body{
+    background: var(--dark);
+    color: white;
+    font-family: OpenSans-Regular;
+}
+
+main{
+    padding: 100px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+/* styling for answer your body's needs section */
+
+
+.aybn_img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    flex-basis: fit-content;
+}
+
+.aybn_img-cont.img-3{
+    display: grid;
+    gap: 24px;
+    grid-template-columns: auto auto; /* Two columns */
+    grid-template-rows: auto auto; /* Two rows */
+    justify-content: center;
+}
+
+.aybn_img-wrapper,
+.aybn_2-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.aybn_img{
+    cursor: pointer;
+}
+
+.aybn_content-container{
+    display: flex;
+    flex: 1 0 30%;
+    max-width: 360px;
+    flex-direction: column;
+    gap: 40px
+}
+
+.aybn_content-copies {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.aybn_content--title{
+    font-size: 24px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+.aybn_content--subcopy{
+    font-family: 'OpenSans-Light';
+    font-size: 16px;
+    line-height: 1.8
+}
+
+
+
+/* Styling for ALL THE LATEST section */
+
+.atl-sec{
+    gap: 60px;
+}
+
+.atl_articles {
+    display: flex;
+    column-gap: 24px;
+    row-gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.atl-header{
+    font-size: 40px;
+    text-align: center;
+}
+.atl_article-card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 320px;
+    gap: 30px;
+}
+.atl_article-card img{
+    border-bottom: 5px solid var(--red);
+}
+
+
+.atl_article-card .atl_a-c-copies{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.atl_article-card h5{
+    font-size: 16px;
+}
+.atl_article-card p{
+    color: #9FA1A1;
+    line-height: 1.8;
+    font-size: 13px
+}
+
+.atl_article-card a{
+    color: white;
+    text-decoration: unset;
+    border-bottom: 1px solid var(--red);
+    display: block;
+    width: fit-content;
+    padding-bottom: 5px
+}
+
+
+
+/* Shared classes */
+.red-text{
+    color: var(--red)
+}
+
+.tm{
+    font-family: OpenSans-Medium;
+}
+
+.tb{
+    font-family: OpenSans-Bold;
+}
+.tl{
+    font-family: OpenSans-Light;
+    font-weight: 300;
+}
+
+.popup{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.popup{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,.5);
+    transition: .5s;
+}
+
+.popup img {
+    width: 400px; /* You can adjust this value */
+    height: auto;
+    max-height: 95vh;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s; /* Transition the max-width property */
+}
+
+
+@media(max-width: 426px){
+    img{
+        width: 100%;
+    }
+    main{
+        gap: 50px
+    }
+    .atl-header{
+        font-size: 24px;
+    }
+    .aybn_content--subcopy,
+    .aybn_content--bm_subcopy{
+        font-size: 12px;
+    }    
+    .popup img{
+        width: 300px;
+    }
+}
+
+@media(max-width: 376px){
+    .atl-header{
+        font-size: 18px;
+    }
+
+}
